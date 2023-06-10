@@ -9008,7 +9008,7 @@ function problem01(usersArray) {
   // and put it an array then return that array
   var fullNames = [];
 
-  usersArray.forEach(function(user) {
+  usersArray.forEach(function (user) {
     var fullName = user.first_name + ' ' + user.last_name;
     fullNames.push(fullName);
   });
@@ -9022,19 +9022,19 @@ console.log(userFullNames);
 
 
 function problem02(userArray) {
-    // return an array of user which is male and age is under 40
-    var user = userArray.filter(function(user) {
-      return user.gender === 'Male' && user.age < 40
-    });
-    return user;
+  // return an array of user which is male and age is under 40
+  var user = userArray.filter(function (user) {
+    return user.gender === 'Male' && user.age < 40
+  });
+  return user;
 }
 var maleUserUnder40 = problem02(users);
 console.log(maleUserUnder40);
 
 function problem03(userArray) {
 
-    // return an array of full name
-  var fullNames = userArray.map(function(user) {
+  // return an array of full name
+  var fullNames = userArray.map(function (user) {
     return `${user.first_name} ${user.last_name}`
   });
   return problem03;
@@ -9047,25 +9047,69 @@ function problem04() {
   // return new array of user where the key of each record in new array is camelCase 
 }
 
-function problem05() {
+function problem05(userArray) {
   // return the average age in users 
+  var totalAge = 0;
+  userArray.forEach(function (user) {
+    totalAge += user.age
+  });
+  var averageAge = totalAge / userArray.length;
+  return averageAge;
 }
 
-function problem0601() {
+var arrUser = problem05(users)
+console.log(arrUser);
+
+
+function problem0601(userArray) {
   // return an array of full name using Array.prototype.reduce
+  var fullNames = userArray.reduce(function (acc, user) {
+    var fullName = user.first_name + " " + user.last_name;
+    acc.push(fullName);
+    return acc;
+  }, []);
+  return fullNames;
 }
 
-function problem0602() {
+var arrFullName = problem0601(users);
+console.log(arrFullName);
+
+
+function problem0602(userArray) {
   // return an array of user which is male and age under 40 using Array.prototype.reduce
+  var userArrs = userArray.reduce(function (acc, user) {
+    if (user.gender === "Male" && user.age < 40) {
+      acc.push(user);
+    }
+    return acc;
+  }, []);
+  return userArrs;
 }
+
+var newArr = problem0602(users);
+console.log(newArr);
+
 
 function problem0603() {
   // return new array where each record is in camelCase using Array.prototype.reduce
 }
 
-function problem07() {
+function problem07(userArray) {
   // return the sorted array of user (sort by field first_name in ascending order)
+  var userArr = userArray.sort(function (a, b) {
+    if (a.first_name < b.first_name) {
+      return -1;
+    }
+    if (a.first_name > b.first_name) {
+      return 1;
+    }
+    return 0;
+  });
+  return userArr;
 }
+
+var newArray = problem07(users);
+console.log(newArray);
 
 function faMap(array, fn) {
   // implement faMap that works like Array.prototype.map
@@ -9100,7 +9144,7 @@ function problem1203(array) {
 }
 
 function getProp(obj, path) {
-    // use Array.prototype.reduce
+  // use Array.prototype.reduce
 }
 
 var student = {
