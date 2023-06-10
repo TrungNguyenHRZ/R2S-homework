@@ -78,3 +78,7 @@ function isLeapYear(year) {
 }
 
 isLeapYear(2000)
+
+//Bài 3a
+
+console.log("***** Bài 3a *****");
