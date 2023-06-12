@@ -389,6 +389,10 @@ strong {
     font-size: 30px;
 }
 
+.follow-me-title-item > a {
+    color: black;
+}
+
 #subscribe {
     display: flex;
     flex-direction: column;
