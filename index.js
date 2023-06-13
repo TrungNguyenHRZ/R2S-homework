@@ -81,6 +81,6 @@ var myQuestions = [
     }
   
     var resultContainer = document.getElementById('result');
-    resultContainer.innerHTML = 'Score: ' + score + ' out of ' + myQuestions.length;
+    resultContainer.innerHTML = 'Điểm: ' + score;
   }
   
