@@ -44,5 +44,6 @@ const sortInventory = (array) => {
     newArray.push(array);
     return newArray;
 }
+
 const vvvv = sortInventory(inventory2)
 console.log(vvvv);
