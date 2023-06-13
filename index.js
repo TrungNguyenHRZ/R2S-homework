@@ -59,7 +59,7 @@ var myQuestions = [
       inputRadioAnswer.setAttribute('value', key);
 
       var labelAnswer = document.createElement('label');
-      labelAnswer.innerText = valueAnswer;
+      labelAnswer.innerText = key + '. ' + valueAnswer;
       form.appendChild(inputRadioAnswer);
       form.appendChild(labelAnswer);
       form.appendChild(document.createElement('br'));
@@ -80,7 +80,7 @@ var myQuestions = [
       }
     }
   
-    var resultContainer = document.getElementById('result');
-    resultContainer.innerHTML = 'Điểm: ' + score + ' trên ' + myQuestions.length;
+    var resultDom = document.getElementById('result');
+    resultDom.innerHTML = 'Điểm: ' + score + ' trên ' + myQuestions.length;
   }
   
