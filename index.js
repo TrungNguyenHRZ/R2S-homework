@@ -66,3 +66,21 @@ var myQuestions = [
       form.appendChild(document.createElement('br'));
     }    
   });
+
+  function calScore() {
+    var score = 0;
+    var radios = document.querySelectorAll('input[type="radio"]:checked');
+  
+    for (var i = 0; i < radios.length; i++) {
+      var questionIndex = parseInt(radios[i].name.replace('answer', ''));
+      var userAnswer = radios[i].value;
+  
+      if (userAnswer === myQuestions[questionIndex].correctAnswer) {
+        score++;
+      }
+    }
+  
+    var resultContainer = document.getElementById('result');
+    resultContainer.innerHTML = 'Score: ' + score + ' out of ' + myQuestions.length;
+  }
+  
