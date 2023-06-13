@@ -84,3 +84,23 @@ var myQuestions = [
     resultDom.innerHTML = 'Điểm: ' + score + ' trên ' + myQuestions.length;
   }
   
+
+
+
+// var button = document.createElement("input");
+// button.setAttribute("type", "button");
+// button.setAttribute("value", "Nộp bài");
+// var count = 0;
+// button.onclick = calScore;
+// function calScore() {
+//   for (let i = 0; i < myQuestions.length; i++) {
+//     var check = document.querySelector(`input[type="button"]:checked`);
+//     if (check.value == myQuestions[i].correctAnswer) {
+//       count++;
+//     }
+//   }
+//   var point = (10 / myQuestions.length) * count;
+//   var resultDom = document.getElementById("result");
+//   resultDom.innerText = "Điểm của bạn là: " + point;
+// }
+// form.appendChild(button);
