@@ -42,10 +42,10 @@ var myQuestions = [
   ];
 
   myQuestions.forEach(function (questionData, index) {
-    var soCauDom = document.createElement('p');
+    var soCauDom = document.createElement('h2');
     soCauDom.innerText = "Câu " + (index + 1);
     
-    var h2Dom = document.createElement('h2');
+    var h2Dom = document.createElement('h3');
     h2Dom.innerText = questionData.question;
 
     form.appendChild(soCauDom);
