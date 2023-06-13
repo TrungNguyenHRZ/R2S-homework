@@ -81,6 +81,6 @@ var myQuestions = [
     }
   
     var resultContainer = document.getElementById('result');
-    resultContainer.innerHTML = 'Điểm: ' + score;
+    resultContainer.innerHTML = 'Điểm: ' + score + ' trên ' + myQuestions.length;
   }
   
