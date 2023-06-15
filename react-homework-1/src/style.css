@@ -1,0 +1,12 @@
+/* styles.css */
+.custom-table {
+    border: 1px solid black;
+}
+
+
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid black;
+
+}
