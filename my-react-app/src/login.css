@@ -1,0 +1,14 @@
+.form_container {
+    display: inline-block;
+    border: 1px solid blue;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.success {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
